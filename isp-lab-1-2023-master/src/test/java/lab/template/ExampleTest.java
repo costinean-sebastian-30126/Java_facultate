@@ -19,4 +19,6 @@ public class ExampleTest {
         assertEquals("Should substract 2 numbers", 5, Example.substract(15,10));
     }
 
+    @Test
+    public void testMultiply() { assertEquals("Should multiply 2 numbers", 10, Example.multiply(2, 5));}
 }

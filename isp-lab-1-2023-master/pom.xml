@@ -7,7 +7,7 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>TemplateLab</name>
+    <name>Laborator 1</name>
 
     <description>Example of super pom for Java application development for software engineering classes.</description>
 

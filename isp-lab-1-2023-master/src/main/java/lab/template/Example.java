@@ -21,7 +21,11 @@ public class Example {
     }
 
     public static int substract(int x, int y){
-        return 0;
+        return x-y;
+    }
+
+    public static int multiply(int x, int y) {
+        return x*y;
     }
 
     public static void main(String[] args) {
@@ -30,6 +34,7 @@ public class Example {
         System.out.println("Number of arguments received: "+args.length+" ");
         for(String arg:args)
             System.out.println("Argument: "+arg);
-        System.out.printf("Result of adding %d with %d is: %d\n\n",10,23,Example.add(10,23));
+        System.out.printf("Result of adding %d with %d is: %d\n",10,23,Example.add(10,23));
+        System.out.printf("Result of multiplying %d with %d is: %d\n", 2, 5, Example.multiply(2,5));
     }
 }
