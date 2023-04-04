@@ -56,6 +56,8 @@ e.g. 2.30 or 14.50 (ignore validation errors for now).
 Extend exercise 3 and implement the aquarium's lights control.
 Algae can be a real problem in any aquarium, and to much light time will boost their growth.
 But if the plant don't get enough light they will die. Keep the lights on anywhere between 6 to 8 hours per day. 
+You need to add 2 new attributes for: lightOnTime and lightsOffTime.
+Like in the case of the previous exercise, turning the lights on/off is determined when setting the current time in the controller.
 
 1. Update the class diagram from exercise 3 with the newly added subsystem.
    The docs directory contains the StarUML model. You can use it to modify ex3 diagram. Export it as ex4.jpg and add the image to docs.

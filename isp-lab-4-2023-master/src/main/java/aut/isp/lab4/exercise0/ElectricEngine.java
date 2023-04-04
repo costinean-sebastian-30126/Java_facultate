@@ -14,7 +14,7 @@ public class ElectricEngine extends Engine {
             batteryCapacity--;
             System.out.println("Electric engine is started.");
         }else{
-            System.out.println("Engine cannot be started. Battery to low (<=10).");
+            System.out.println("Engine cannot be started. Battery too low (<=10).");
         }
 
     }

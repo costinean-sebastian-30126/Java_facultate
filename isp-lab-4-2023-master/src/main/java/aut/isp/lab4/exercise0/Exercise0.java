@@ -5,10 +5,10 @@ public class Exercise0 {
 
         Engine e1 = new DieselEngine(100, 15);
         //Car car1 = new Car(e1, "Red");
-        Car car1 = Car.getInstance(e1, "Red");
-        car1.startCar();
+        //Car car1 = Car.getInstance(e1, "Red");
+        //car1.startCar();
 
-        car1.stopCar();
+        //car1.stopCar();
 
         Engine e2 = new ElectricEngine(50,12);
 
