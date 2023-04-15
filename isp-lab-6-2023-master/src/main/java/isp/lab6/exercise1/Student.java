@@ -1,30 +1,25 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package isp.lab6.exercise1;
+
 import java.util.HashMap;
-import java.util.Map;
 
-
-/**
- *
- * @author User
- */
 public class Student {
+    private int ID;
     private String name;
-    private String University;
-    Map<String,Double>studentGrades = new HashMap<>();
+    private HashMap<String, Integer> grades = new HashMap<>();
 
-    public Student(String name, String University) {
+    public Student(int ID, String name) {
+        this.ID = ID;
         this.name = name;
-        this.University = University;
     }
-    
-  public void addGrades(String clas,Double grade)
-  {
-      studentGrades.put(clas,grade);
-  }
+
+    public int getID() {
+        return ID;
+    }
+
+    public void setID(int ID) {
+        this.ID = ID;
+    }
+
     public String getName() {
         return name;
     }
@@ -33,25 +28,24 @@ public class Student {
         this.name = name;
     }
 
-    public String getUniversity() {
-        return University;
+    public HashMap<String, Integer> getGrades() {
+        return grades;
     }
 
-    public void setUniversity(String University) {
-        this.University = University;
+    public void addGrade(String subject, int grade) {
+        grades.put(subject, grade);
     }
 
-    public Map<String, Double> getStudentGrades() {
-        return studentGrades;
-    }
-
-    public void setStudentGrades(Map<String, Double> studentGrades) {
-        this.studentGrades = studentGrades;
+    public void setGrade(String subject, int new_grade) {
+        grades.replace(subject, new_grade);
     }
 
     @Override
     public String toString() {
-        return "Student{" + "name=" + name + ", University=" + University + ", studentGrades=" + studentGrades + '}';
+        return "Student{" +
+                "ID=" + ID +
+                ", name='" + name + '\'' +
+                ", grades=" + grades +
+                '}';
     }
-
 }
