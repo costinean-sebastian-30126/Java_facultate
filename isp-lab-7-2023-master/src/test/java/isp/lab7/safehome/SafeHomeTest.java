@@ -7,11 +7,12 @@ import static org.junit.Assert.*;
 
 public class SafeHomeTest {
 
-    ControllerInterface ctrl;
+    ControllerInterface ctrl = new DoorLockController();
 
     @Before
     public void instantiateDoorController() {
         //INITIALISE CONTROLLER OBJECT HERE
+        DoorLockController ctrl = new DoorLockController();
     }
 
     // >>>> DO NOT CHANGE CODE AFTER THIS LINE ! <<<<
@@ -56,7 +57,6 @@ public class SafeHomeTest {
                 ctrl.enterPin("4532");
                 fail("Exception should be thrown!");
             } catch (Exception e) {
-                System.out.println("Attempt " + i);
                 assertExceptionType(e, "InvalidPinException");
             }
         }//.for
@@ -118,7 +118,6 @@ public class SafeHomeTest {
                 ctrl.enterPin("4532");
                 fail("Exception should be thrown!");
             } catch (Exception e) {
-                System.out.println("Attempt " + i);
                 assertExceptionType(e, "InvalidPinException");
             }
         }//.for

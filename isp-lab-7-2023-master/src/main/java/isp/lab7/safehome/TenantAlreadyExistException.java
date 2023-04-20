@@ -8,6 +8,10 @@ package isp.lab7.safehome;
  *
  * @author User
  */
-public class TenantAlreadyExistException {
+public class TenantAlreadyExistException extends Exception{
+   
+    public TenantAlreadyExistException(String msg){
+        super(msg);
+    }
     
 }
