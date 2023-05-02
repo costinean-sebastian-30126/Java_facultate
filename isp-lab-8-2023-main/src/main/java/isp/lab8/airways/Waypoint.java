@@ -6,7 +6,7 @@ import java.util.Objects;
 /**
  * Example waypoint class which can be extended to be used in implementation of the exercise. Add constructor, getters, setters, etc.
  */
-public class Waypoint implements Serializable{
+public class Waypoint implements Serializable,Comparable<Waypoint> {
     private int index;
     private String name;
     private double latitude;
