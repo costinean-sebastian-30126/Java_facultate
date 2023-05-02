@@ -1,5 +1,6 @@
 package isp.lab8.airways;
 
+import java.io.Serializable
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
@@ -11,7 +12,7 @@ import lombok.ToString;
 @NoArgsConstructor(access = AccessLevel.PUBLIC)
 @AllArgsConstructor(access = AccessLevel.PUBLIC)
 @ToString
-public class Waypoint {
+public class Waypoint implements Serializable{
     private String index;
     private String name;
     private double latitude;
