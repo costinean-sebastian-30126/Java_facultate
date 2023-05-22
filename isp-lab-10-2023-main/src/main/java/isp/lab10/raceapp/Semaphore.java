@@ -4,9 +4,8 @@
  */
 package isp.lab10.raceapp;
 
-import isp.lab10.racedemo.*;
-import java.awt.*;
 import javax.swing.*;
+import java.awt.*;
 
 public class Semaphore {
     public static void main(String[] args) {
@@ -49,20 +48,10 @@ class SemaphoreThread extends Thread {
 
 class SemaphorePanel extends JPanel {
     private Color color;
-     private boolean isGreen;
     
     public SemaphorePanel() {
-         isGreen = false;
         setPreferredSize(new Dimension(100, 300));
         color = Color.GRAY;
-    }
-    public void setIsGreen(boolean isGreen) {
-        this.isGreen = isGreen;
-        repaint();
-    }
-
-    public boolean isGreen() {
-        return isGreen;
     }
     
     public void setGray() {

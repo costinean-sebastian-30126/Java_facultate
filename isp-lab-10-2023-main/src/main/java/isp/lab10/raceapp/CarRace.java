@@ -1,10 +1,7 @@
 package isp.lab10.raceapp;
-import java.awt.*;
-import java.io.File;
-import javax.sound.sampled.AudioInputStream;
-import javax.sound.sampled.AudioSystem;
-import javax.sound.sampled.Clip;
+
 import javax.swing.*;
+import java.awt.*;
 
 public class CarRace {
     public static void main(String[] args) {
@@ -22,13 +19,12 @@ public class CarRace {
         Car car2 = new Car("Blue car", carPanel);
         Car car3 = new Car("Green car", carPanel);
         Car car4 = new Car("Yellow car", carPanel);
-         
+
         car1.start();
         car2.start();
         car3.start();
         car4.start();
     }
-    
     
 }
 
@@ -36,6 +32,7 @@ class Car extends Thread {
     private String name;
     private int distance = 0;
     private CarPanel carPanel;
+    private long racetime;
 
     public Car(String name, CarPanel carPanel) {
         //set thread name;
@@ -44,7 +41,12 @@ class Car extends Thread {
         this.carPanel = carPanel;
     }
 
+    public long getRacetime(){
+        return this.racetime;
+    }
+
     public void run() {
+        long t1 = System.currentTimeMillis();
         while (distance < 400) {
             // simulate the car moving at a random speed
             int speed = (int) (Math.random() * 10) + 1;
@@ -59,7 +61,8 @@ class Car extends Thread {
                 e.printStackTrace();
             }
         }
-
+        long t2 = System.currentTimeMillis();
+        racetime = t2-t1;
         carPanel.carFinished(name);
     }
 }

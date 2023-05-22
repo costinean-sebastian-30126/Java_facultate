@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="isp-lab-10" />
+        <module name="isp-lab-10-2023-main" />
       </profile>
     </annotationProcessing>
   </component>
